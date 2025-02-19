@@ -13,13 +13,25 @@ local M = {
     'Mofiqul/vscode.nvim'
   },
   {
+    'olivercederborg/poimandres.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "zenbones-theme/zenbones.nvim",
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "sainnhe/gruvbox-material",
     event = "VeryLazy",
   },
   {
     "folke/tokyonight.nvim",
     event = "VeryLazy",
-    opts = {},
+    opts = require("configs.tokyonight"),
   },
   {
     "rebelot/kanagawa.nvim",
@@ -29,9 +41,15 @@ local M = {
     end
   },
   {
+    "slugbyte/lackluster.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "catppuccin/nvim",
     event = "VeryLazy",
     name = "catppuccin",
+    opts = require("configs.catppuccin")
   },
   {
     "rose-pine/neovim",
@@ -50,6 +68,7 @@ local M = {
   },
   {
     "olimorris/onedarkpro.nvim",
+    opts = require("configs.onedarkpro"),
     event = "VeryLazy",
   },
   {
@@ -93,18 +112,22 @@ local M = {
     end
   },
   {
-    "nvzone/volt" ,
-    lazy = true
+    "karb94/neoscroll.nvim",
+    opts = {},
   },
-  {
-    "nvzone/menu",
-    lazy = true
-  },
-  {
-    "nvzone/minty",
-    lazy = true,
-    cmd = { "Shades", "Huefy" },
-  },
+--  {
+--    "nvzone/volt" ,
+--    lazy = true
+--  },
+--  {
+--    "nvzone/menu",
+--    lazy = true
+--  },
+--  {
+--    "nvzone/minty",
+--    lazy = true,
+--    cmd = { "Shades", "Huefy" },
+--  },
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -115,6 +138,9 @@ local M = {
     config = function()
       require("configs.nvim-tree")
     end,
+  },
+  {
+    'metalelf0/base16-black-metal-scheme'
   },
   {
     "nvim-tree/nvim-web-devicons",
@@ -195,6 +221,7 @@ local M = {
   },
   {
     "folke/noice.nvim",
+    enabled = false;
     event = "VeryLazy",
     opts = {
     },

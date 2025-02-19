@@ -1,6 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 require 'nvim-treesitter.install'.prefer_git = false
-require 'nvim-treesitter.install'.compilers = { "cl", "clang" }
+require 'nvim-treesitter.install'.compilers = { "clang" }
 
 configs.setup({
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python", "cpp", "nu", "rust" },

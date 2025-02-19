@@ -35,6 +35,13 @@ end
 local function get_buffer_progress()
   -- Get the current line number
   local current_line = vim.api.nvim_win_get_cursor(0)[1]
+  local current_buf = vim.api.nvim_get_current_buf()
+  local current_file = vim.api.nvim_buf_get_name(current_buf)
+  local file_name = vim.fn.fnamemodify(current_file, ":t")
+
+  if file_name == "" then
+    return ""
+  end
 
   -- Get the total number of lines in the current buffer
   local total_lines = vim.api.nvim_buf_line_count(0)
@@ -83,7 +90,7 @@ local function get_active_lsp()
     if next(clients) == nil then
         return ''
     end
-    local msg = " LSP ~ "
+    local msg = "  LSP ~ "
     for _, client in ipairs(clients) do
         msg = msg .. client.name .. ' '
     end

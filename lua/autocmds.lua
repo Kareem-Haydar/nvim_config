@@ -37,4 +37,4 @@ vim.lsp.inlay_hint.enable(true)
 
 package.path = package.path .. vim.fn.getcwd() .. "/?.lua;" .. vim.fn.getcwd() .. "/lua/?.lua;" .. vim.fn.getcwd() .. "/plugin/?.lua;"
 
-vim.cmd[[ colorscheme catppuccin ]]
+vim.cmd[[ colorscheme zenbones ]]

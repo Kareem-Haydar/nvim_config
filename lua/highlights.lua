@@ -73,14 +73,41 @@ local function update_telescope_highlights()
             bg = "#2a2a2a"
         },
         ["rose-pine"] = {
-            prompt_highlight = "#eac397",
-            results_highlight = "#ea9a97",
-            preview_highlight = "#ea97be",
+            prompt_highlight = "#5362ac",
+            results_highlight = "#ac5362",
+            preview_highlight = "#62ac53",
             prompt_text = "#1f1f1f",
             results_text = "#1f1f1f",
             preview_text = "#1f1f1f",
             bg = "#2e2c40"
         },
+        ["onedark"] = {
+            prompt_highlight = "#b06ec6",
+            results_highlight = "#c6b06e",
+            preview_highlight = "#6ec6b0",
+            prompt_text = "#262A31",
+            results_text = "#262A31",
+            preview_text = "#262A31",
+            bg = "#262a31"
+        },
+        ["base16-black-metal-gorgoroth"] = {
+            prompt_highlight = "#5f8787",
+            results_highlight = "#8c7f70",
+            preview_highlight = "#aaaaab",
+            prompt_text = "#262A31",
+            results_text = "#262A31",
+            preview_text = "#262A31",
+            bg = "#000000"
+        },
+        ["zenbones"] = {
+            prompt_highlight = "#716966",
+            results_highlight = "#8c7f70",
+            preview_highlight = "#aaaaab",
+            prompt_text = "#262A31",
+            results_text = "#262A31",
+            preview_text = "#262A31",
+            bg = "#171512"
+        }
         -- Add other colorschemes and their colors...
     }
 
