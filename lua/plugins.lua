@@ -1,22 +1,6 @@
 local M = {
   {
-    "scottmckendry/cyberdream.nvim",
-    event = "VeryLazy",
-    opts = {
-      extensions = {
-        telescope = true,
-        lualine = false
-      }
-    },
-  },
-  {
     'Mofiqul/vscode.nvim'
-  },
-  {
-    'olivercederborg/poimandres.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
   },
   {
     "zenbones-theme/zenbones.nvim",
@@ -39,11 +23,6 @@ local M = {
     config = function ()
       require("kanagawa").setup()
     end
-  },
-  {
-    "slugbyte/lackluster.nvim",
-    lazy = false,
-    priority = 1000,
   },
   {
     "catppuccin/nvim",
@@ -115,21 +94,9 @@ local M = {
     "karb94/neoscroll.nvim",
     opts = {},
   },
---  {
---    "nvzone/volt" ,
---    lazy = true
---  },
---  {
---    "nvzone/menu",
---    lazy = true
---  },
---  {
---    "nvzone/minty",
---    lazy = true,
---    cmd = { "Shades", "Huefy" },
---  },
   {
     "nvim-tree/nvim-tree.lua",
+    enabled = false,
     version = "*",
     lazy = false,
     dependencies = {
@@ -140,7 +107,17 @@ local M = {
     end,
   },
   {
-    'metalelf0/base16-black-metal-scheme'
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
+    config = function ()
+      require("configs.neotree")
+    end
   },
   {
     "nvim-tree/nvim-web-devicons",
@@ -221,7 +198,7 @@ local M = {
   },
   {
     "folke/noice.nvim",
-    enabled = false;
+    --enabled = false;
     event = "VeryLazy",
     opts = {
     },

@@ -141,3 +141,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         update_telescope_highlights()
     end,
 })
+
+vim.opt.fillchars = { eob = ' ' }
